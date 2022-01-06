@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* Remove Rounded Corner on Border */
+.border-rm-crn
+{
+    border-radius: 0 !important;
+}
+
 /* Hamburger Button Animation */
 .container-icon {
     display: inline-block;
@@ -124,13 +135,15 @@ a.dropdown-item{
 
 
 /* =========================================  HOMEPAGE ====================================== */
-/* Main */
+/*---------------------------------------------------------- Main -----------------------------------*/
 
 #Main {
     position: relative;
     height: 100vh;
     color: #fff;
 }
+
+/* Video Main */
 .container-video {
     position: absolute;
     top: 0;
@@ -158,6 +171,7 @@ a.dropdown-item{
     object-fit: cover;
   }
 
+/* Left-Heading Inside Main   */
 .heading-main-left{
     display: flex;
     flex-direction: column;
@@ -172,6 +186,10 @@ a.dropdown-item{
     z-index:1;
 }  
 
+/* Home-Icon */
+.home-icon{
+    width: 25px;
+}
 
 /* Mouse Scroll Animation */
 
@@ -211,3 +229,14 @@ a.dropdown-item{
     10% { transform: translateY(0); opacity: 1; }
     100% { transform: translateY(15px); opacity: 0;}
   }
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/*-----------------------------------Our Main Focus-----------------------------   */
+
+.main-focus-icon{
+    width: 30%;
+}
+
+#Off-Plan-Project{
+    background-color: #d7d7d759;
+}
