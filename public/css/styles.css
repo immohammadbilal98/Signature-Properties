@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hamburger Button Animation */
+.container-icon {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 32px;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  margin: 4px -1px;
+  transition: 0.4s;
+}
+
+.scrolling-active .bar1, .scrolling-active .bar2, .scrolling-active .bar3{
+  background-color: rgb(0, 0, 0);
+}
+
+.bar1,.bar2{
+  margin-bottom: 8px;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 8px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-6px, -6px);
+}  
+
+/* NAVIGATION ===============================================================================*/
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color;
+    /* transition: background-color .5s ease; */
+    z-index: 1000;
+    font-weight: 700;
+}
+
+.navbar-brand{
+  filter: brightness(1.2);  
+}
+
+  
+.nav a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-list{
+  font-size: 20px;
+}
+
+@media (max-width:1078px) {
+  .nav-list{
+    font-size: 11px;
+  }   
+}
+
+/*Apply styles after scroll*/
+.scrolling-active {
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 3px 1rem rgba(0, 0, 0, .1);
+}
+
+.scrolling-active .nav a{
+  color: #ffffff;
+}
+
+.nav-light .navbar-toggler {
+  color: #af782b;
+  border-color: #D08F32;
+}    
+
+.scrolling-active .nav-light .navbar-toggler {
+  color: rgb(255 255 255 / 55%);
+  border-color: rgb(0 0 0 / 51%);
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: box-shadow .15s ease-in-out;
+}
+
+/* .navbar-toggler-icon {
+  background-image: url("https://img.icons8.com/ios/50/000000/menu--v4.png");
+} */
+
+.dropdown-menu{
+  /* background-color: rgb(107 164 199); */
+  border-radius: 0rem;
+}
+
+.nav-item{
+  margin-right: 5px;
+}
+
+ul.dropdown-menu.show li{
+  border-bottom: 1px solid #d5e1e9;
+}
+
+a.dropdown-item{
+  color: #000000;
+}
+
+
+
+/* =========================================  HOMEPAGE ====================================== */
+/* Main */
+
+#Main {
+    position: relative;
+    height: 100vh;
+    color: #fff;
+}
+.container-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url("./assets/bg.jpg") no-repeat center center/cover;
+    z-index: -1;
+  }
+  
+  .container-video:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 114.5%;
+    background: rgba(0, 0, 0, 45%);
+  }
+  
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.heading-main-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:1;
+}  
+
+
+/* Mouse Scroll Animation */
+
+  .scroll-downs {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    left: 0;
+    margin: auto;    
+    width :34px;
+    height: 55px;
+    z-index: 1;
+  }
+  .mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+    z-index: 1;
+  }
+  .scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #fff;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+    z-index: 1;
+  }
+  @keyframes scroll {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
+  }
