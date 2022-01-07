@@ -49,22 +49,20 @@ html{
   transform: rotate(45deg) translate(-6px, -6px);
 }  
 
+/* ------------------------------ */
+
 /* NAVIGATION ===============================================================================*/
 header {
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    transition: background-color;
+    /* transition: background-color; */
     /* transition: background-color .5s ease; */
+    background-color: #000000;
     z-index: 1000;
     font-weight: 700;
 }
-
-.navbar-brand{
-  filter: brightness(1.2);  
-}
-
   
 .nav a{
   text-decoration: none;
@@ -72,7 +70,7 @@ header {
 }
 
 .nav-list{
-  font-size: 20px;
+  font-size: 15px;
 }
 
 @media (max-width:1078px) {
@@ -111,29 +109,24 @@ header {
   transition: box-shadow .15s ease-in-out;
 }
 
-/* .navbar-toggler-icon {
-  background-image: url("https://img.icons8.com/ios/50/000000/menu--v4.png");
-} */
 
-.dropdown-menu{
-  /* background-color: rgb(107 164 199); */
-  border-radius: 0rem;
+.nav-link:hover {
+  color: #ce8e32;
 }
 
 .nav-item{
-  margin-right: 5px;
+  margin-right: 25px;
 }
 
-ul.dropdown-menu.show li{
-  border-bottom: 1px solid #d5e1e9;
+.nav-enq
+{
+  background-color: #ce8e32;
 }
 
-a.dropdown-item{
-  color: #000000;
+.nav-enq:hover
+{
+  color: #050505;
 }
-
-
-
 /* =========================================  HOMEPAGE ====================================== */
 /*---------------------------------------------------------- Main -----------------------------------*/
 
@@ -239,4 +232,32 @@ a.dropdown-item{
 
 #Off-Plan-Project{
     background-color: #d7d7d759;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/*-----------------------------------Features Properties-----------------------------   */
+.feature-pro-img{
+  height: 50vh;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/*-----------------------------------Footer-----------------------------   */
+
+footer{
+  background-color: #000000;
+}
+
+.btn-popular-search{
+  color: #ffffff;
+}
+
+.btn-popular-search:hover{
+  box-shadow: 0 0 0 0 rgb(0 0 0 / 0%);
+}
+
+.card-body-popular-search{
+  background-color: #000000;
+  color: #ffffff;
 }
