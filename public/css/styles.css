@@ -370,7 +370,11 @@ footer{
 
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
-
+  .col-off-plan, .col-feat-prop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -395,4 +399,14 @@ footer{
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (max-width: 1400px) {
 
+}
+
+
+@media (max-width: 600px) {
+  .bar1,.bar2,.bar3{
+    margin: 4.8px -5px;
+  }
+  .change .bar1{
+    transform: rotate(-45deg) translate(-4px, 4px);
+  }
 }
