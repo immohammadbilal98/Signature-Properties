@@ -31,8 +31,9 @@ app.get("/",function(req,res){
     res.render("home",{ msg: false });               
 });
 
-
-
+app.get("/buy",function(req,res){
+    res.render("buy");               
+});
 
 
 
