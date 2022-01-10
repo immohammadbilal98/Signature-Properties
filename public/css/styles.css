@@ -63,6 +63,10 @@ header {
     z-index: 1000;
     font-weight: 700;
 }
+
+.navbar-logo{
+  width: 14rem;
+}
   
 .nav a{
   text-decoration: none;
@@ -358,3 +362,37 @@ footer{
   background-size: cover;
   width: 100%; 
 } */
+
+
+
+
+/* =================================  MEDIA QUERY ========================================= */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .card-off-plan{
+    width: 10rem !important;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+  .card-off-plan{
+    width: 14rem !important;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (max-width: 1400px) {
+
+}
