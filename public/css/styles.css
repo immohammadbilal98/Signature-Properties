@@ -276,11 +276,11 @@ footer{
 
 :root {
   --marquee-width: 98.7vw;
-  --marquee-height: 20vh;
+  --marquee-height: 30vh;
   /* --marquee-elements: 12; */ /* defined with JavaScript */
   --marquee-elements-displayed: 5;
   --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
-  --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+  --marquee-animation-duration: calc(var(--marquee-elements) * 7s);
 }
 
 
@@ -350,6 +350,20 @@ footer{
   .marquee:before, .marquee:after { width: 5rem; }
 }
 
+/* Zoom Marquee */
+.zoom-marquee {
+  /* padding: 50px; */
+  /* background-color: green; */
+  transition: transform .2s; /* Animation */
+  /* width: 200px;
+  height: 200px; */
+  /* margin: 0 auto; */
+}
+
+.zoom-marquee:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
 
 /* -------------------------------------------BUY PAGE---------------------------------------------------- */
 
@@ -371,6 +385,11 @@ footer{
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
   .col-off-plan, .col-feat-prop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .col-about{
     display: flex;
     flex-direction: column;
     align-items: center;
