@@ -9,10 +9,43 @@ html{
 }
 
 
+#Coming-Soon{
+  margin-top: 10%;
+}
+
+/* CUSTOM CSS - CLASS */
 /* Remove Rounded Corner on Border */
 .border-rm-crn
 {
     border-radius: 0 !important;
+}
+
+/* Underline Animation */
+
+.underline-animation{
+  color: rgb(3, 3, 3);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  /* padding: 15px 20px; */
+  position: relative;
+}
+
+.underline-animation:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: rgb(3, 3, 3);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.underline-animation:hover:after { 
+  width: 100%; 
+  left: 0; 
 }
 
 /* Hamburger Button Animation */
@@ -115,7 +148,7 @@ header {
 
 
 .nav-link:hover {
-  color: #ce8e32;
+  color: #d3ae36;
 }
 
 .nav-item{
@@ -124,7 +157,7 @@ header {
 
 .nav-enq
 {
-  background-color: #ce8e32;
+  background-color: #d3ae36;
 }
 
 .nav-enq:hover
@@ -152,7 +185,7 @@ header {
     z-index: -1;
   }
   
-  .container-video:after {
+  /* .container-video:after {
     content: "";
     position: absolute;
     top: 0;
@@ -160,7 +193,7 @@ header {
     width: 100%;
     height: 114.5%;
     background: rgba(0, 0, 0, 45%);
-  }
+  } */
   
   .video {
     width: 100%;
@@ -237,6 +270,176 @@ header {
 #Off-Plan-Project{
     background-color: #d7d7d759;
 }
+
+/* CARD ANIMATION */
+.section_our_solution .row {
+  align-items: center;
+}
+
+.our_solution_category {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.our_solution_category .solution_cards_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.solution_cards_box .solution_card {
+  flex: 0 50%;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2), 0 5px 15px 0 rgba(37, 44, 97, 0.15);
+  border-radius: 15px;
+  margin: 8px;
+  padding: 10px 15px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-height: 265px;
+  transition: 0.7s;
+}
+
+.solution_cards_box .solution_card:hover {
+  background: #D3AE36;
+  color: #fff;
+  transform: scale(1.1);
+  z-index: 9;
+}
+
+.solution_cards_box .solution_card:hover::before {
+  background: rgb(85 108 214 / 10%);
+}
+
+.solution_cards_box .solution_card:hover .solu_title h3,
+.solution_cards_box .solution_card:hover .solu_description p {
+  color: #fff;
+}
+
+.solution_cards_box .solution_card:before {
+  content: "";
+  position: absolute;
+  background: rgb(85 108 214 / 5%);
+  width: 170px;
+  height: 400px;
+  z-index: -1;
+  transform: rotate(42deg);
+  right: -56px;
+  top: -23px;
+  border-radius: 35px;
+}
+
+.solution_cards_box .solution_card:hover .solu_description button {
+  background: #fff !important;
+  color: #D3AE36;
+}
+
+.solution_card .so_top_icon {
+}
+
+.solution_card .solu_title h3 {
+  color: #212121;
+  font-size: 1.3rem;
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+.solution_card .solu_description p {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.solution_card .solu_description button {
+  border: 0;
+  border-radius: 15px;
+  background: linear-gradient(
+    140deg,
+    #D3AE36 0%,
+    #D3AE36 50%,
+    #D3AE36 75%
+  ) !important;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 5px 16px;
+}
+
+.our_solution_content h1 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+.our_solution_content p {
+}
+
+.hover_color_bubble {
+  position: absolute;
+  background: rgb(54 81 207 / 15%);
+  width: 100rem;
+  height: 100rem;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  top: 16rem;
+  border-radius: 50%;
+  transform: rotate(-36deg);
+  left: -18rem;
+  transition: 0.7s;
+}
+
+.solution_cards_box .solution_card:hover .hover_color_bubble {
+  top: 0rem;
+}
+
+.solution_cards_box .solution_card .so_top_icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.solution_cards_box .solution_card .so_top_icon img {
+  width: 115px;
+  height: 115px;
+  object-fit: contain;
+}
+
+/*start media query*/
+@media screen and (min-width: 320px) {
+  .sol_card_top_3 {
+    position: relative;
+    top: 0;
+  }
+
+  .our_solution_category {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .our_solution_category .solution_cards_box {
+    flex: auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .our_solution_category .solution_cards_box {
+    flex: 1;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .sol_card_top_3 {
+    position: relative;
+    top: -3rem;
+  }
+  .our_solution_category {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
 
 /* ------------------------------------------------------------------------------------------------------------- */
 
@@ -408,16 +611,26 @@ footer{
   .card-off-plan{
     width: 14rem !important;
   }
+  .our_solution_category {
+    width: 100%;
+    margin: 0 auto;
+}
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (max-width: 1200px) {
-
+  .our_solution_category {
+    width: 100%;
+    margin: 0 auto;
+}
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (max-width: 1400px) {
-
+  .our_solution_category {
+    width: 105%;
+    margin: 0 auto;
+}
 }
 
 

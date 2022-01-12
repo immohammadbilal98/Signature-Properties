@@ -33,6 +33,7 @@ $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
   });
 
+// Filtering Searching
 
-// Filtering Sear
-  
+
+
