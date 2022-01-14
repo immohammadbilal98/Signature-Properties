@@ -13,6 +13,21 @@ html{
   margin-top: 10%;
 }
 
+img{
+  object-fit: cover;
+}
+
+/* Zoom = */
+.zoom{
+  transition: transform .2s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+
 /* CUSTOM CSS - CLASS */
 /* Remove Rounded Corner on Border */
 .border-rm-crn
@@ -39,7 +54,7 @@ html{
   height: 2px;
   left: 50%;
   position: absolute;
-  background: rgb(3, 3, 3);
+  background: #f1d676;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
@@ -171,6 +186,12 @@ header {
     position: relative;
     height: 100vh;
     color: #fff;
+    background-attachment: fixed;
+    
+}
+
+.video{
+ 
 }
 
 /* Video Main */
@@ -272,20 +293,24 @@ header {
 }
 
 /* CARD ANIMATION */
-.section_our_solution .row {
-  align-items: center;
-}
 
-.our_solution_category {
+/* #Explore{
+  overflow-x: hidden;
+} */
+/* .section_our_solution .row {
+  align-items: center;
+} */
+
+/* .our_solution_category {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-.our_solution_category .solution_cards_box {
+} */
+/* .our_solution_category .solution_cards_box {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+} */
 .solution_cards_box .solution_card {
   flex: 0 50%;
   background: #fff;
@@ -304,7 +329,7 @@ header {
   background: #D3AE36;
   color: #fff;
   transform: scale(1.1);
-  z-index: 9;
+  /* z-index: 9; */
 }
 
 .solution_cards_box .solution_card:hover::before {
@@ -334,8 +359,8 @@ header {
   color: #D3AE36;
 }
 
-.solution_card .so_top_icon {
-}
+/* .solution_card .so_top_icon {
+} */
 
 .solution_card .solu_title h3 {
   color: #212121;
@@ -437,6 +462,175 @@ header {
   .our_solution_category {
     width: 90%;
     margin: 0 auto;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/*-----------------------------------Gallery Filter-----------------------------   */
+/* ::selection{
+  color: #fff;
+  background: #007bff;
+} */
+
+.wrapper{
+  margin: 100px auto;
+  max-width: 1100px;
+}
+.wrapper nav{
+  display: flex;
+  justify-content: center;
+}
+.wrapper .items-gallery{
+  display: flex;
+  max-width: 720px;
+  width: 100%;
+  justify-content: space-between;
+}
+.items-gallery span{
+  padding: 7px 25px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #d3ae36;
+  border-radius: 50px;
+  border: 2px solid #d3ae36;
+  transition: all 0.3s ease;
+}
+.items-gallery span.active,
+.items-gallery span:hover{
+  color: #fff;
+  background: #d3ae36;
+}
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.gallery .image{
+  width: calc(100% / 4);
+  padding: 7px;
+}
+.gallery .image span{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.gallery .image img{
+  width: 100%;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+.gallery .image:hover img{
+  transform: scale(1.1);
+}
+.gallery .image.hide{
+  display: none;
+}
+.gallery .image.show{
+  animation: animate 0.4s ease;
+}
+@keyframes animate {
+  0%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+.preview-box{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: #fff;
+  max-width: 700px;
+  width: 100%;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 3px;
+  padding: 0 5px 5px 5px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+.preview-box.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+}
+.preview-box .details{
+  padding: 13px 15px 13px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.details .title{
+  display: flex;
+  font-size: 18px;
+  font-weight: 400;
+}
+.details .title p{
+  font-weight: 500;
+  margin-left: 5px;
+}
+.details .icon{
+  color: #007bff;
+  font-style: 22px;
+  cursor: pointer;
+}
+.preview-box .image-box{
+  width: 100%;
+  display: flex;
+}
+.image-box img{
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+}
+.shadow{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  display: none;
+  background: rgba(0,0,0,0.4);
+}
+.shadow.show{
+  display: block;
+}
+@media (max-width: 1000px) {
+  .gallery .image{
+    width: calc(100% / 3);
+  }
+}
+@media (max-width: 800px) {
+  .gallery .image{
+    width: calc(100% / 2);
+  }
+}
+@media (max-width: 700px) {
+  .wrapper nav .items-gallery{
+    max-width: 600px;
+  }
+  nav .items-gallery span{
+    padding: 7px 15px;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper{
+    margin: 30px auto;
+  }
+  .wrapper nav .items-gallery{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav .items-gallery span{
+    margin: 5px;
+  }
+  .gallery .image{
+    width: 100%;
   }
 }
 
@@ -568,6 +762,20 @@ footer{
 }
 
 
+/*
+#Gallery-Filter{
+  position: relative; ----- change absolute
+}
+
+#Feature-Properties{
+    z-index: 5; -------------
+    position: relative;
+    top: 372px; -------------
+    background-color: #fff;
+}
+
+*/
+
 /* -------------------------------------------BUY PAGE---------------------------------------------------- */
 
 /*-----------------------------------buy = Background-----------------------------   */
@@ -581,7 +789,47 @@ footer{
 } */
 
 
+/* category */
+.categoryselector {
+  width: 50%; 
+  display: inline-block; 
+  vertical-align:middle;
+}
 
+/* price */
+.priceselector {
+  width: 36%; 
+  display: inline-block; 
+  vertical-align:middle;
+}
+
+/* product area */
+.showbox {
+  padding: 20px 2px 20px 30px;  
+  max-height: 700px; 
+  border: solid 1px grey;
+  border-radius: 5px;
+  overflow-y: auto;
+}
+
+
+
+/* ------------------------------------------NAVBAR - ITEMS ---------------------------------------------------- */
+
+#Contact-Heading, #About-Heading, #Buy-Page{
+  padding: 160px 0px 15px 0px;
+}
+
+#Contact-Heading{
+  background-color: #f1f1f1;
+  -webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(#d3ae36), to(#fff), color-stop(0.5, #fff)) 0 0 10 0 repeat repeat;
+}
+
+/* ------------------------------------------ABOUT ---------------------------------------------------- */
+
+.about-pic-img{
+  width: 100%;
+}
 
 /* =================================  MEDIA QUERY ========================================= */
 
@@ -628,7 +876,7 @@ footer{
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (max-width: 1400px) {
   .our_solution_category {
-    width: 105%;
+    width: 100%;
     margin: 0 auto;
 }
 }

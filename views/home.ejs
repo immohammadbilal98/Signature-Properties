@@ -96,7 +96,7 @@
                     <div class="our_solution_category">
                       <div class="solution_cards_box">
                         <div class="solution_card">
-                          <div class="hover_color_bubble"></div>
+                          <!-- <div class="hover_color_bubble"></div> -->
                           <div class="d-flex flex-column align-items-center">
                           <div class="so_top_icon">
                               <img class="main-focus-icon pb-1" src="/image/icon/sell-home-icon.jpg" alt="">
@@ -124,9 +124,9 @@
         <div class="d-flex flex-column align-content-center align-items-center d-inline">
             <h3 class="text-center underline-animation py-3">Off Plan Project</h3>    
         </div> 
-       <p>Lorem ipsum dolor sit amet. Ab adipisci galisum ut Quis unde aut quia odit et architecto similique ut ipsam accusamus. Aut perspiciatis accusamus est minus et enim assumenda est laboriosam voluptates et illum consectetur ut voluptates voluptatibus. Et magni quia ea voluptatem saepe non quia incidunt vel deleniti deserunt aut provident iste in vitae eveniet est iusto placeat. Vel enim libero non omnis quos ea ullam rerum.</p>
+       <p class="pb-3">Lorem ipsum dolor sit amet. Ab adipisci galisum ut Quis unde aut quia odit et architecto similique ut ipsam accusamus. Aut perspiciatis accusamus est minus et enim assumenda est laboriosam voluptates et illum consectetur ut voluptates voluptatibus. Et magni quia ea voluptatem saepe non quia incidunt vel deleniti deserunt aut provident iste in vitae eveniet est iusto placeat. Vel enim libero non omnis quos ea ullam rerum.</p>
        <div class="row">
-           <div class="col-off-plan col-lg-4 col-md-4 col-sm-6 pb-3">
+           <div class="col-off-plan col-lg-4 col-md-4 col-sm-6 pb-3 zoom">
             <div class="card card-off-plan border-0" style="width: 18rem;">
                 <img src="/image/off-project/1.jpg" class="card-img-top" alt="...">
                 <div class="card-body p-0">
@@ -135,7 +135,7 @@
                 </div>
               </div>
            </div>
-           <div class="col-off-plan col-lg-4 col-md-4 col-sm-6 pb-3">
+           <div class="col-off-plan col-lg-4 col-md-4 col-sm-6 pb-3 zoom">
             <div class="card card-off-plan border-0" style="width: 18rem;">
                 <img src="/image/off-project/2.jpg" class="card-img-top" alt="...">
                 <div class="card-body p-0">
@@ -144,7 +144,7 @@
                 </div>
               </div>
            </div>
-           <div class="col-off-plan col-lg-4 col-md-4 col-sm-6 pb-3">
+           <div class="col-off-plan col-lg-4 col-md-4 col-sm-6 pb-3 zoom">
             <div class="card card-off-plan border-0" style="width: 18rem;">
                 <img src="/image/off-project/3.jpg" class="card-img-top" alt="...">
                 <div class="card-body p-0">
@@ -159,10 +159,46 @@
 </section>
 
 
+<section id="Gallery-Filter">
+  <div class="container my-5">
+    <div class="items-gallery d-flex justify-content-center">
+      <span class="mx-1 item-gallery active" data-name="all">All</span>
+      <span class="mx-1 item-gallery" data-name="luxury">Luxury</span>
+      <span class="mx-1 item-gallery" data-name="apartment">Apartment</span>
+      <span class="mx-1 item-gallery" data-name="villas">Villas</span>
+    </div>
+  </nav>
+  <!-- filter Images -->
+  <div class="gallery d-flex justify-content-center">
+    <div class="image" data-name="luxury"><span><img src="/image/off-project/1.jpg" alt=""></span></div>
+    <div class="image" data-name="villas"><span><img src="/image/off-project/1.jpg" alt=""></span></div>
+    <div class="image" data-name="apartment"><span><img src="/image/off-project/2.jpg" alt=""></span></div>
+    <div class="image" data-name="luxury"><span><img src="/image/off-project/1.jpg" alt=""></span></div>
+    <div class="image" data-name="apartment"><span><img src="/image/off-project/2.jpg" alt=""></span></div>
+    <div class="image" data-name="villas"><span><img src="/image/off-project/3.jpg" alt=""></span></div>
+    <div class="image" data-name="luxury"><span><img src="/image/off-project/1.jpg" alt=""></span></div>
+    <div class="image" data-name="villas"><span><img src="/image/off-project/3.jpg" alt=""></span></div>
+  </div>
+  </div>
+  <!-- fullscreen img preview box -->
+  <!-- <div class="preview-box">
+  <div class="details">
+    <span class="text-dark">Image Category: <p></p></span>
+    <span class="icon fas fa-times"></span>
+  </div>
+  <div class="image-box"><img src="" alt=""></div>
+  </div>
+  <div class="shadow"></div>
+  </div> -->
+</section>
+
+
+
+
 <section id="Feature-Properties"> 
-    <div class="container mt-2">
-        <h3 class="py-3">Features Properties</h3>
-        <div class="row">
+    <div class="container py-5">
+        <h3 class="py-2 underline-animation d-inline">Features Properties</h3>
+        <div class="row mt-4">
             <div class="col-feat-prop col d-flex">
                 <div class="card" style="width: 18rem;">
                     <img src="/image/off-project/1.jpg" class="card-img-top feature-pro-img" alt="...">
@@ -228,8 +264,91 @@
     </div>
 </section>
 
+<section id="Buy-Page">
+  <div class="container my-5">
+      
+      <h2>PORTFOLIO</h2>
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('nature')"> Nature</button>
+        <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+        <button class="btn" onclick="filterSelection('people')"> People</button>
+      </div>
+      
+      <!-- Portfolio Gallery Grid -->
+      <div class="row">
+        <div class="column nature">
+          <div class="content">
+            <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+            <h4>Mountains</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column nature">
+          <div class="content">
+            <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+            <h4>Lights</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column nature">
+          <div class="content">
+            <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+            <h4>Forest</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+      
+        <div class="column cars">
+          <div class="content">
+            <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
+            <h4>Retro</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column cars">
+          <div class="content">
+            <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+            <h4>Fast</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column cars">
+          <div class="content">
+            <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+            <h4>Classic</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+      
+        <div class="column people">
+          <div class="content">
+            <img src="/w3images/people1.jpg" alt="People" style="width:100%">
+            <h4>Girl</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column people">
+          <div class="content">
+            <img src="/w3images/people2.jpg" alt="People" style="width:100%">
+            <h4>Man</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column people">
+          <div class="content">
+            <img src="/w3images/people3.jpg" alt="People" style="width:100%">
+            <h4>Woman</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+      <!-- END GRID -->
+      </div>
+  </div>
+</section>
+
 <section id="List-Of-Developer">
-    <div class="container-fluid p-0 mt-5 ">
+    <div class="container-fluid p-0 ">
         <h3 class="text-center py-3">Channel Partners</h3>
         <div class="marquee">
             <ul class="marquee-content">

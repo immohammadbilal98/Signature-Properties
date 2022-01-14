@@ -1,15 +1,46 @@
 <%- include("partials/header"); -%> 
 
-<section id="Coming-Soon">
+<!-- <section id="Coming-Soon">
     <div class="container my-5 ">
         <div class="p-5 my-5 bg-dark rounded-3">
             <div class="container-fluid py-5">
               <h1 class="display-5 fw-bold text-white">Coming Soon....</h1>
-              <!-- <p class="col-xl-12 fs-4 text-white">We're working to finish the development of this site.</p> -->
             </div>
         </div>
     </div>
+</section> -->
+
+<section id="Contact-Heading" >
+   <div class="container-fluid">
+       <div class="px-5 text-center">
+        <h1>GET IN TOUCH</h1>
+        <hr>
+        <h4>Please provide your details below and one of our team will be in touch with you soon.</h4>
+        <hr>
+       </div>
+   </div>
 </section>
 
+<section id="Contact-Form">
+    <div class="container mt-5">
+        <form method="POST" action="/send">
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Name</label>
+                <input class="form-control form-control-md" type="text"  aria-label=".form-control-md example"> <!-- placeholder=".form-control-md" --> 
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Comment</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <button type="button" class="btn btn-dark border-rm-crn">Submit</button>
+              </div>
+        </form>
+    </div>
+</section>
 
 <%- include("partials/footer"); -%> 
