@@ -42,6 +42,7 @@ app.get("/about",function(req,res){
     res.render("about");               
 });
 
+
 app.get("/buy",function(req,res){
     res.render("buy");               
 });
@@ -52,6 +53,10 @@ app.get("/sell",function(req,res){
 
 app.get("/rent",function(req,res){
     res.render("rent");               
+});
+
+app.get("/off-plan",function(req,res){
+    res.render("off-plan");               
 });
 
 app.get("/contact",function(req,res){
