@@ -7,6 +7,13 @@ const compression = require("compression");
 //=====================================
 require("dotenv").config();
 
+//Router
+// const router = express.Router();
+
+// const routes = require(./routes/index)
+
+// app.use()
+
 const app = express();
 
 // compress all responses

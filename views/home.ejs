@@ -1,5 +1,5 @@
 <%- include("partials/header"); -%> 
-<section id="Main">
+<!-- <section id="Main">
     <div class="container-fluid px-0 container-video">
         <video class="video" autoplay muted loop>
           <source src="/video/video-sp.mp4" type="video/mp4" />
@@ -18,6 +18,59 @@
             </div>
         </div>
     </div>   
+</section> -->
+
+
+<section id="Main-Slider">
+  <div class="container-fluid px-0">
+     
+    <!-- Slider -->
+      <!-- <div class="carousel slide" id="main-carousel" data-ride="carousel"> -->
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+          <!-- <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          </div> -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="/image/carousel-slider/1.jfif" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/image/carousel-slider/2.jfif" alt="Second slide">
+            </div>     
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/image/carousel-slider/3.jfif" alt="Second slide">
+            </div> 
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/image/carousel-slider/4.jfif" alt="Second slide">
+            </div> 
+       
+          </div>
+          <div class="row heading-main-left">
+            <div class="col-xl-7">
+                <div class="text-start px-5">
+                <h6 style="color: #d08f32;"><span class="d-flex align-items-end"><img class="home-icon" src="/image/icon/home-icon.png"/>Real Estate Agency</span></h6>
+                <h3 class="text-white">Find Your Future Dream Home By Us</h3>
+            </div>
+            </div>
+        </div>
+        <div class="scroll-downs">
+            <div class="mousey">
+              <div class="scroller"></div>
+            </div>
+        </div>
+        <div >
+          <button class="carousel-control-prev"  style="top: 37rem;" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next"  style="top: 37rem;" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>          
+        </div>
+        </div>
+</div>
 </section>
 
 <section id="Explore">
@@ -262,89 +315,6 @@
             </div>                            
         </div>
     </div>
-</section>
-
-<section id="Buy-Page">
-  <div class="container my-5">
-      
-      <h2>PORTFOLIO</h2>
-      <div id="myBtnContainer">
-        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-        <button class="btn" onclick="filterSelection('nature')"> Nature</button>
-        <button class="btn" onclick="filterSelection('cars')"> Cars</button>
-        <button class="btn" onclick="filterSelection('people')"> People</button>
-      </div>
-      
-      <!-- Portfolio Gallery Grid -->
-      <div class="row">
-        <div class="column nature">
-          <div class="content">
-            <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
-            <h4>Mountains</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-        <div class="column nature">
-          <div class="content">
-            <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
-            <h4>Lights</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-        <div class="column nature">
-          <div class="content">
-            <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
-            <h4>Forest</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-      
-        <div class="column cars">
-          <div class="content">
-            <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
-            <h4>Retro</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-        <div class="column cars">
-          <div class="content">
-            <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
-            <h4>Fast</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-        <div class="column cars">
-          <div class="content">
-            <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
-            <h4>Classic</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-      
-        <div class="column people">
-          <div class="content">
-            <img src="/w3images/people1.jpg" alt="People" style="width:100%">
-            <h4>Girl</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-        <div class="column people">
-          <div class="content">
-            <img src="/w3images/people2.jpg" alt="People" style="width:100%">
-            <h4>Man</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-        <div class="column people">
-          <div class="content">
-            <img src="/w3images/people3.jpg" alt="People" style="width:100%">
-            <h4>Woman</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-      <!-- END GRID -->
-      </div>
-  </div>
 </section>
 
 <section id="List-Of-Developer">
