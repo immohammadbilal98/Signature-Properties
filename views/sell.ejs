@@ -1,15 +1,26 @@
 <%- include("partials/header"); -%> 
 
-<section id="Coming-Soon">
-    <div class="container my-5 ">
-        <div class="p-5 my-5 bg-dark rounded-3">
-            <div class="container-fluid py-5">
-              <h1 class="display-5 fw-bold text-white">Coming Soon....</h1>
-              <!-- <p class="col-xl-12 fs-4 text-white">We're working to finish the development of this site.</p> -->
-            </div>
-        </div>
+<section id="Buy-Page">
+    <div class="container my-5">
+      <div class="items-gallery d-flex justify-content-center">
+        <span class="mx-1 item-gallery active" data-name="all">All</span>
+        <span class="mx-1 item-gallery" data-name="luxury">Luxury</span>
+        <span class="mx-1 item-gallery" data-name="apartment">Apartment</span>
+        <span class="mx-1 item-gallery" data-name="villas">Villas</span>
+      </div>
+    </nav>
+    <!-- filter Images -->
+    <div class="gallery d-flex justify-content-center">
+      <div class="image" data-name="luxury"><span><img src="/image/off-project/1.jpg" alt=""></span></div>
+      <div class="image" data-name="villas"><span><img src="/image/off-project/1.jpg" alt=""></span></div>
+      <div class="image" data-name="apartment"><span><img src="/image/off-project/2.jpg" alt=""></span></div>
+      <div class="image" data-name="luxury"><span><img src="/image/off-project/1.jpg" alt=""></span></div>
+      <div class="image" data-name="apartment"><span><img src="/image/off-project/2.jpg" alt=""></span></div>
+      <div class="image" data-name="villas"><span><img src="/image/off-project/3.jpg" alt=""></span></div>
+      <div class="image" data-name="luxury"><span><img src="/image/off-project/1.jpg" alt=""></span></div>
+      <div class="image" data-name="villas"><span><img src="/image/off-project/3.jpg" alt=""></span></div>
     </div>
-</section>
-
+    </div>
+  </section>
 
 <%- include("partials/footer"); -%> 

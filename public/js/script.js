@@ -86,6 +86,9 @@ window.onload = () => {
   }
   */
 
+
+  
+
 // JQUERY ===============================================================
 
 // Tooltips
@@ -94,3 +97,9 @@ $(document).ready(function () {
 });
 
 // Filtering Searching
+
+
+// $('body').removeClass('modal-open');
+// $('.modal-backdrop').remove();
+
+$('.modal-backdrop').remove();

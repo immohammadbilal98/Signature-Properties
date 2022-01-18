@@ -60,7 +60,7 @@ img{
   top: 0;
   left: 0;
   /* min-width: 100%; */
-  height: 42rem;
+  height: 47rem;
   object-fit: cover;
   /* filter: brightness(0.5); */
 }
@@ -278,6 +278,24 @@ header {
 {
   color: #050505;
 }
+
+.dropdown-menu{
+  background-color: #000000 !important;
+}
+
+.btn-dropdown:hover {
+  color: #d3ae36;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* remove the gap so it doesn't close */
+}
+
+/* Enquiry-Form on Modal */
+.modal-backdrop{
+  z-index: 100 !important;
+}
 /* =========================================  HOMEPAGE ====================================== */
 /*---------------------------------------------------------- Main -----------------------------------*/
 
@@ -357,7 +375,8 @@ header {
     width: 3px;
     padding: 10px 15px;
     height: 35px;
-    border: 2px solid #fff;
+    border: 2px solid #ffc107;;
+    background-color: #000000;
     border-radius: 25px;
     opacity: 0.75;
     box-sizing: content-box;
@@ -607,7 +626,7 @@ header {
   margin-top: 30px;
 }
 .gallery .image{
-  width: calc(100% / 4);
+  /* width: calc(100% / 4); */
   padding: 7px;
 }
 .gallery .image span{
@@ -615,12 +634,12 @@ header {
   width: 100%;
   overflow: hidden;
 }
-.gallery .image img{
-  width: 100%;
+.gallery .image-pic img{
+  /* width: 100%; */
   vertical-align: middle;
   transition: all 0.3s ease;
 }
-.gallery .image:hover img{
+.gallery .image-pic:hover img{
   transform: scale(1.1);
 }
 .gallery .image.hide{
