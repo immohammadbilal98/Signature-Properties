@@ -1,13 +1,13 @@
 // JavaScript ===============================================================
 
-/* 
+
 // Change Navbar Scrolling 
 window.addEventListener('scroll', function () {
     let header = document.querySelector('header');
     let windowPosition = window.scrollY > 0;
     header.classList.toggle('scrolling-active', windowPosition);
  
-})*/
+}) 
 
 // Hamburger Button Animation
 let ChangeIcon = function (icon) {
@@ -103,3 +103,70 @@ $(document).ready(function () {
 // $('.modal-backdrop').remove();
 
 $('.modal-backdrop').remove();
+
+// function openNav() {
+//   document.getElementById("myNav").style.width = "100%";
+// }
+
+// function closeNav() {
+//   document.getElementById("myNav").style.width = "0%";
+// }
+
+
+// $('.toggle-menu').click (function(){
+//   $(this).toggleClass('active');
+//   $('#menu').toggleClass('open');
+// });
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+// "to" tween (animate to provided values)
+
+
+gsap.from("#Explore", {
+  scrollTrigger: {
+    trigger: "#Explore",
+    start: "center bottom"
+  }, // start the animation when ".box" enters the viewport (once)
+  x: -200,
+  opacity: 0,
+  duration:1.5,
+});
+
+
+gsap.from(".OFP-1",{
+  scrollTrigger: {
+    trigger: ".OFP-1",
+    start: "center bottom"
+  }, // start the animation when ".box" enters the viewport (once)
+  ease:  Expo.easeInOut,
+  opacity: 0,
+  y: -200 ,
+  rotate:30,
+  delay:.05
+});
+
+gsap.from(".OFP-2",{
+  scrollTrigger: {
+    trigger: ".OFP-1",
+    start: "center bottom"
+  }, // start the animation when ".box" enters the viewport (once)
+  ease:  Expo.easeInOut,
+  opacity: 0,
+  y: -200 ,
+  rotate:30,
+  delay:.1
+});
+
+gsap.from(".OFP-3",{
+  scrollTrigger: {
+    trigger: ".OFP-1",
+    start: "center bottom"
+  }, // start the animation when ".box" enters the viewport (once)
+  ease:  Expo.easeInOut,
+  opacity: 0,
+  y: -200 ,
+  rotate:30,
+  delay:.15
+});

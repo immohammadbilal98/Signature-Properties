@@ -15,10 +15,17 @@
     <!-- CSS File -->
     <link rel="stylesheet" href="/css/styles.css"/>
   
+
+    <link href="https://fonts.googleapis.com/css?family=Vesper-Libre|Varta" rel="stylesheet">
+
     <!-- JQUERY File -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
       <!-- Scroll Reveal -->
     <!-- <script src="https://unpkg.com/scrollreveal"></script>  -->
 
@@ -54,54 +61,54 @@
              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                <ul class="navbar-nav nav-list align-items-center">
                  <li class="nav-item">
-                   <a class="nav-link nav-hover" href="/about">About Us</a>
+                   <a class="nav-link nav-hover" href="/about">ABOUT US</a>
                  </li>                            
                  <li class="nav-item">
                   <!-- <a class="nav-link nav-hover" href="/buy">Buy</a> -->
                   <div class="dropdown">
-                    <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                      Buy
+                    <a class="btn btn-dropdown dropdown-toggle" style="font-weight:700;" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                      BUY
                     </a>                  
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                      <li><a class="dropdown-item" href="#">Apartment</a></li>
-                      <li><a class="dropdown-item" href="#">Villas</a></li>
-                      <li><a class="dropdown-item" href="#">Offices</a></li>
-                      <li><a class="dropdown-item" href="#">Townhouse</a></li>
-                      <li><a class="dropdown-item" href="#">Studio</a></li>
-                      <li><a class="dropdown-item" href="#">Warehouse</a></li>
+                      <li><a class="dropdown-item" href="#">APPARTMENT</a></li>
+                      <li><a class="dropdown-item" href="#">VILLAS</a></li>
+                      <li><a class="dropdown-item" href="#">OFFICES</a></li>
+                      <li><a class="dropdown-item" href="#">TOWNHOUSE</a></li>
+                      <li><a class="dropdown-item" href="#">STUDIO</a></li>
+                      <li><a class="dropdown-item" href="#">WAREHOUSE</a></li>
                     </ul>
                   </div>
                 </li>
                 <li class="nav-item">
                   <!-- <a class="nav-link nav-hover" href="/buy">Rent</a> -->
                   <div class="dropdown">
-                    <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="btn btn-dropdown dropdown-toggle" style="font-weight:700;" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                       Rent
                     </a>                  
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                      <li><a class="dropdown-item" href="#">Apartment</a></li>
-                      <li><a class="dropdown-item" href="#">Villas</a></li>
-                      <li><a class="dropdown-item" href="#">Offices</a></li>
-                      <li><a class="dropdown-item" href="#">Townhouse</a></li>
-                      <li><a class="dropdown-item" href="#">Studio</a></li>
-                      <li><a class="dropdown-item" href="#">Warehouse</a></li>
+                      <li><a class="dropdown-item" href="#">APPARTMENT</a></li>
+                      <li><a class="dropdown-item" href="#">VILLAS</a></li>
+                      <li><a class="dropdown-item" href="#">OFFICES</a></li>
+                      <li><a class="dropdown-item" href="#">TOWNHOUSE</a></li>
+                      <li><a class="dropdown-item" href="#">STUDIO</a></li>
+                      <li><a class="dropdown-item" href="#">WAREHOUSE</a></li>
                     </ul>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link nav-hover" href="/sell">Sell</a>
+                  <a class="nav-link nav-hover" href="/sell">SELL</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link nav-hover" href="/off-plan">Off-Plan</a>
+                  <a class="nav-link nav-hover" href="/off-plan">OFF-PLAN</a>
                 </li>  
                 <li class="nav-item">
-                  <a class="nav-link nav-hover" href="/blog">Blog</a>
+                  <a class="nav-link nav-hover" href="/blog">BLOG</a>
                 </li>
                  <li class="nav-item">
-                   <a class="nav-link nav-hover" href="/contact">Contact Us</a>
+                   <a class="nav-link nav-hover" href="/contact">CONTACT US</a>
                  </li>
                  <li class="nav-item">
-                    <a class="nav-link nav-enq" data-toggle="modal" data-target="#modalContactForm">Enquiry</a>
+                    <a class="nav-link nav-enq" data-toggle="modal" data-target="#modalContactForm">ENQUIRY</a>
                     <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog modal-md" role="document">
@@ -110,13 +117,13 @@
         <h4 class="modal-title  font-weight-bold">
           <div class="px-5 text-center">
             <h1>GET IN TOUCH</h1>
-            <hr>
+            <!-- <hr>
             <h4>Please provide your details below and one of our team will be in touch with you soon.</h4>
-            <hr>
+            <hr> -->
            </div>
         </h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none; background: none;">
+          <span aria-hidden="true"><img src="https://img.icons8.com/ios/30/000000/close-window.png"/></span>
         </button>
       </div>
       <div class="modal-body mx-3">
