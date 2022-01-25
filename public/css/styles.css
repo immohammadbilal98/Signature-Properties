@@ -6,7 +6,12 @@
 
 html{
     scroll-behavior: smooth;
+   
 }
+
+/* body{
+  overflow-x: hidden;
+} */
 
 h1,h2,h3,h4,h5,h6{
   font-family: 'Vesper-Libre';
@@ -1078,11 +1083,15 @@ footer{
 
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
-  .col-off-plan, .col-feat-prop{
+  .col-OFP{
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  .col-OFP-img-sm{
+    width: 35rem !important;
+  }
+
   .col-about{
     display: flex;
     flex-direction: column;
@@ -1097,20 +1106,24 @@ footer{
   .change .bar1{
     transform: rotate(-45deg) translate(-4px, 4px);
   }
+  .col-OFP{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) and (min-width: 601px){
-  /* .card-off-plan{
-    width: 10rem !important;
-  } */
+  .col-OFP{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (max-width: 992px) and (min-width: 769px) {
-  /* .card-off-plan{
-    width: 14rem !important;
-  } */
   .our_solution_category {
     width: 100%;
     margin: 0 auto;

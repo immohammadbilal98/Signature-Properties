@@ -126,35 +126,38 @@
           <span aria-hidden="true"><img src="https://img.icons8.com/ios/30/000000/close-window.png"/></span>
         </button>
       </div>
-      <div class="modal-body mx-3">
+      <%= msg ? msg :'' %>
+      <form method="POST" action="/send">
+      <div class="modal-body mx-3">       
         <div class="md-form mb-3">
           <!-- <i class="fas fa-user prefix grey-text"></i> -->
           <label data-error="wrong" data-success="right" for="form34">Your name</label>
-          <input type="text" id="form34" class="form-control validate">          
+          <input type="text" id="form34" name="name" class="form-control validate">          
         </div>
 
         <div class="md-form mb-3">
           <!-- <i class="fas fa-envelope prefix grey-text"></i> -->
           <label data-error="wrong" data-success="right" for="form29">Your email</label>
-          <input type="email" id="form29" class="form-control validate">
+          <input type="email" id="form29" name="email" class="form-control validate">
         </div>
 
         <div class="md-form mb-3">
           <!-- <i class="fas fa-tag prefix grey-text"></i> -->
           <label data-error="wrong" data-success="right" for="form32">Your Phone No.</label>
-          <input type="text" id="form32" class="form-control validate">
+          <input type="text" id="form32" name="phone" class="form-control validate">
         </div>
 
         <div class="md-form">
           <!-- <i class="fas fa-pencil prefix grey-text"></i> -->
           <label data-error="wrong" data-success="right" for="form8">Your message</label>
-          <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
+          <textarea type="text" id="form8" name="message" class="md-textarea form-control" rows="4"></textarea>
         </div>
 
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button class="btn btn-warning">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
+        <button type="submit" class="btn btn-warning">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
       </div>
+    </form>
     </div>
   </div>
 </div>

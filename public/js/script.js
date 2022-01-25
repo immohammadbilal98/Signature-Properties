@@ -128,45 +128,45 @@ gsap.from("#Explore", {
   scrollTrigger: {
     trigger: "#Explore",
     start: "center bottom"
-  }, // start the animation when ".box" enters the viewport (once)
+  }, 
   x: -200,
   opacity: 0,
   duration:1.5,
 });
 
 
-gsap.from(".OFP-1",{
+gsap.from(".NL-1",{
   scrollTrigger: {
-    trigger: ".OFP-1",
+    trigger: ".NL-1",
     start: "center bottom"
-  }, // start the animation when ".box" enters the viewport (once)
+  }, 
   ease:  Expo.easeInOut,
   opacity: 0,
-  y: -200 ,
-  rotate:30,
-  delay:.05
-});
-
-gsap.from(".OFP-2",{
-  scrollTrigger: {
-    trigger: ".OFP-1",
-    start: "center bottom"
-  }, // start the animation when ".box" enters the viewport (once)
-  ease:  Expo.easeInOut,
-  opacity: 0,
-  y: -200 ,
-  rotate:30,
+  x: -500 ,
+  duration:1,
   delay:.1
 });
 
-gsap.from(".OFP-3",{
+gsap.from(".NL-2",{
   scrollTrigger: {
-    trigger: ".OFP-1",
+    trigger: ".NL-2",
     start: "center bottom"
-  }, // start the animation when ".box" enters the viewport (once)
+  }, 
   ease:  Expo.easeInOut,
   opacity: 0,
-  y: -200 ,
-  rotate:30,
-  delay:.15
+  x: 500 ,
+  duration:1,
+  delay:.2
 });
+
+// gsap.from(".OFP-3",{
+//   scrollTrigger: {
+//     trigger: ".OFP-1",
+//     start: "center bottom"
+//   }, 
+//   ease:  Expo.easeInOut,
+//   opacity: 0,
+//   y: -200 ,
+//   rotate:30,
+//   delay:.15
+// });
