@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const compression = require("compression");
 const res = require("express/lib/response");
+const nodemailer = require("nodemailer")
 // const router = express.Router();
 //=====================================
 require("dotenv").config();
@@ -241,12 +242,12 @@ app.post('/send', (req, res) => {
       <h3>Message</h3>
       <p>${req.body.message}</p>
     `;
-  
+     /*
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-      host: 'mail.signature.property',
-      port: 587,
-      secure: false, // true for 465, false for other ports
+      host: 'us2.smtp.mailhostbox.com',
+      port: 25,
+      secure: true, // true for 465, false for other ports
       auth: {
           user: process.env.USER, // generated ethereal user
           pass: process.env.PASS  // generated ethereal password
@@ -255,6 +256,21 @@ app.post('/send', (req, res) => {
         rejectUnauthorized:false
       }
     });
+    */
+
+
+    let transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        type: 'OAuth2',
+        user: process.env.USER,
+        pass: process.env.PASS,
+        clientId: process.env.CLIENTID,
+        clientSecret: process.env.CLIENTSECRET,
+        refreshToken: process.env.REFRESHTOKEN
+      }
+    });
+
   
     // setup email data with unicode symbols
     let mailOptions = {
@@ -273,7 +289,8 @@ app.post('/send', (req, res) => {
         console.log('Message sent: %s', info.messageId);   
         console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
   
-        res.render("home", { msg: "email has been sent. " });
+        // res.render("home", { msg: "email has been sent. " });
+        res.render("send");
     });
     });
   

@@ -32,7 +32,11 @@ p{
   color: rgb(197 138 0)!important;
 }
 
-
+.btn-more:hover{
+  color: #fff;
+  background-color: #000000;
+  /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
+}
 
 #Coming-Soon{
   margin-top: 10%;
@@ -384,12 +388,16 @@ header {
 
 /*Apply styles after scroll*/
 .scrolling-active {
-  background-color: #f8f8f8;
+  background-color: #000000;
   box-shadow: 0px 1px 8px 3px rgb(0 0 0 / 20%)
 }
 
 .scrolling-active .nav a{
-  color: #000000;
+  color: #ffffff;
+}
+
+.scrolling-active .nav a:hover{
+  color: #af782b;
 }
 
 .nav-light .navbar-toggler {
@@ -431,8 +439,8 @@ header {
   color: #050505;
 }
 
-.dropdown-menu{
-  background-color: #F8F8F8 !important;
+.scrolling-active .dropdown-menu{
+  background-color: #000000 !important;
 }
 
 .btn-dropdown:hover {
@@ -992,11 +1000,11 @@ footer{
 }
 .marquee:before {
   left: 0;
-  background: linear-gradient(to right, #1111114d 0%, transparent 100%);
+  background: linear-gradient(to right,  rgb(211 174 54) 0%, transparent 100%);
 }
 .marquee:after {
   right: 0;
-  background: linear-gradient(to left, #1111114d 0%, transparent 100%);
+  background: linear-gradient(to left,  rgb(211 174 54) 0%, transparent 100%);
 }
 .marquee-content {
   list-style: none;
@@ -1354,7 +1362,7 @@ footer{
 }
  */
 
-.readmore {
+/* .readmore {
   display: inline-block;
   width: auto;
   position: relative;
@@ -1388,7 +1396,7 @@ footer{
   -webkit-transition: all ease-in-out .3s;
   opacity: 1;
   
-}
+} */
 
 
 
