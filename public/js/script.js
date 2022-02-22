@@ -130,6 +130,9 @@ $(document).ready(function () {
   });
   
 });
+
+
+
 // initialise
 function carouselStart() {
   // check if local storage stored a slide, if yes make it active
@@ -321,75 +324,75 @@ gsap.registerPlugin(ScrollTrigger);
 // "to" tween (animate to provided values)
 
 
-gsap.from("#Explore", {
-  scrollTrigger: {
-    trigger: "#Explore",
-    start: "center bottom"
-  }, 
-  x: -200,
-  opacity: 0,
-  duration:1.5,
-});
+// gsap.from("#Explore", {
+//   scrollTrigger: {
+//     trigger: "#Explore",
+//     start: "center bottom"
+//   }, 
+//   x: -200,
+//   opacity: 0,
+//   duration:1.5,
+// });
 
 
-gsap.from(".NL-1",{
-  scrollTrigger: {
-    trigger: ".NL-1",
-    start: "center bottom"
-  }, 
-  ease:  Expo.easeInOut,
-  opacity: 0,
-  x: -500 ,
-  duration:1,
-  delay:.1
-});
+// gsap.from(".NL-1",{
+//   scrollTrigger: {
+//     trigger: ".NL-1",
+//     start: "center bottom"
+//   }, 
+//   ease:  Expo.easeInOut,
+//   opacity: 0,
+//   x: -500 ,
+//   duration:1,
+//   delay:.1
+// });
 
-gsap.from(".NL-2",{
-  scrollTrigger: {
-    trigger: ".NL-2",
-    start: "center bottom"
-  }, 
-  ease:  Expo.easeInOut,
-  opacity: 0,
-  x: 500 ,
-  duration:1,
-  delay:.5
-});
+// gsap.from(".NL-2",{
+//   scrollTrigger: {
+//     trigger: ".NL-2",
+//     start: "center bottom"
+//   }, 
+//   ease:  Expo.easeInOut,
+//   opacity: 0,
+//   x: 500 ,
+//   duration:1,
+//   delay:.5
+// });
 
-gsap.from(".OFP-1",{
-  scrollTrigger: {
-    trigger: ".OFP-1",
-    start: "center bottom"
-  }, 
-  ease:  Expo.easeInOut,
-  opacity: 0,
-  y: -50 ,
-  rotate:15,
-  delay:.10
-});
+// gsap.from(".OFP-1",{
+//   scrollTrigger: {
+//     trigger: ".OFP-1",
+//     start: "center bottom"
+//   }, 
+//   ease:  Expo.easeInOut,
+//   opacity: 0,
+//   y: -50 ,
+//   rotate:15,
+//   delay:.10
+// });
 
-gsap.from(".OFP-2",{
-  scrollTrigger: {
-    trigger: ".OFP-2",
-    start: "center bottom"
-  }, 
-  ease:  Expo.easeInOut,
-  opacity: 0,
-  y: -100 ,
-  rotate:15,
-  delay:.15
-});
+// gsap.from(".OFP-2",{
+//   scrollTrigger: {
+//     trigger: ".OFP-2",
+//     start: "center bottom"
+//   }, 
+//   ease:  Expo.easeInOut,
+//   opacity: 0,
+//   y: -100 ,
+//   rotate:15,
+//   delay:.15
+// });
 
 
 
-gsap.from(".OFP-3",{
-  scrollTrigger: {
-    trigger: ".OFP-3",
-    start: "center bottom"
-  }, 
-  ease:  Expo.easeInOut,
-  opacity: 0,
-  y: -150 ,
-  rotate:15,
-  delay:.15
-});
+// gsap.from(".OFP-3",{
+//   scrollTrigger: {
+//     trigger: ".OFP-3",
+//     start: "center bottom"
+//   }, 
+//   ease:  Expo.easeInOut,
+//   opacity: 0,
+//   y: -150 ,
+//   rotate:15,
+//   delay:.15
+// });

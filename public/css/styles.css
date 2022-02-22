@@ -38,12 +38,23 @@ p{
   /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
 }
 
+.full-screen-size {
+  height: 100vh;  
+}
+
+
+
 #Coming-Soon{
   margin-top: 10%;
 }
 
 img{
   object-fit: cover;
+}
+
+.img-full{
+  height: 100%;
+  width: 100%;
 }
 
 /* Zoom = */
@@ -81,15 +92,26 @@ color:#d5d5d5;
 
 #myCarousel .carousel-item h4{-webkit-animation-name:fadeInLeft; animation-name:fadeInLeft;} 
 #myCarousel .carousel-item p{-webkit-animation-name:slideInRight; animation-name:slideInRight;} 
-#myCarousel .carousel-item a{-webkit-animation-name:fadeInUp; animation-name:fadeInUp;}
-#myCarousel .carousel-item .mask img{-webkit-animation-name:slideInRight; animation-name:slideInRight; display:block; height:41rem; width:35.1rem;}
+#myCarousel .carousel-item a{-webkit-animation-name:fadeInUp; animation-name:fadeInUp; margin: 0px auto 0px 0px;}
+#myCarousel .carousel-item .mask img{
+  -webkit-animation-name:slideInRight; 
+  animation-name:slideInRight; 
+  display:block; 
+  /* height:41rem; 
+  width:35.1rem; */
+}
 #myCarousel h4, #myCarousel p, #myCarousel a, #myCarousel .carousel-item .mask img{-webkit-animation-duration: 1s;
   animation-duration: 1.2s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 #myCarousel .container {max-width: 1430px;  }
-#myCarousel .carousel-item{height:100%; min-height:550px; }
+#myCarousel .carousel-item{
+  /* height:100%; 
+  min-height:550px;  */
+  height: 100%;
+  min-height: 100vh;
+}
 #myCarousel{position:relative; z-index:1; background-color: #ffffff; }
 
 .carousel-pd-top{
@@ -260,10 +282,6 @@ animation-name: slideInRight;
 }
 
 /* ====================================================================================================== */
-
-
-/* ========================================= CIRCLE ANIMATION ========================*/
-
 /* ====================================================================================================== */
 
 /* CUSTOM CSS - CLASS */
@@ -361,7 +379,7 @@ header {
     left: 0;
     /* transition: background-color; */
     /* transition: background-color .5s ease; */
-    /* background-color: #000000; */
+    background: rgba(0,0,0,.7);
     /* background-image: linear-gradient(rgb(13 110 253 / 19%),rgb(13 110 253 / 15%),rgb(13 110 253 / 0%)); */
     z-index: 1000;
     font-weight: 700;
@@ -373,7 +391,7 @@ header {
   
 .nav a{
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .nav-list{
@@ -457,7 +475,7 @@ header {
   z-index: 100 !important;
 }
 /* =========================================  HOMEPAGE ====================================== */
-/*---------------------------------------------------------- Main -----------------------------------*/
+/*------------------------------------------ Main -----------------------------------*/
 
 #Main {
     position: relative;
@@ -744,10 +762,89 @@ header {
 }
 
 /* ------------------------------------------------------------------------------------------------------------- */
-
-.card-body-OFD{
+/*======================= OFF-PLAN-HOMEPAGE======================= */
+/* .card-body-OFD{
   background-image: linear-gradient(1deg, rgb(226 184 85), transparent 100%);
+} */
+
+.hoverOFD {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 100%;
 }
+
+
+
+/* .hover-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  transition: all 0.4s;
+} */
+
+.hover img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.hover-content {
+  position: relative;
+  z-index: 99;
+}
+
+
+/* DEMO 1 ============================== */
+.hover-OFD img {
+  width: 110%;
+  position: absolute;
+  top: 0;
+  left: -5%;
+  transition: all 0.3s;
+}
+
+.hover-OFD-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  transition: all 0.4s;
+}
+
+/* .hover-OFD .hover-OFD-overlay {
+  background: rgba(0, 0, 0, 0.5);
+} */
+
+.hover-OFD-description {
+  transform: translateY(0.5rem);
+  transition: all 0.4s;
+  opacity: 0;
+}
+
+.hover-OFD:hover .hover-OFD-content {
+  bottom: 2rem;
+}
+
+.hover-OFD:hover .hover-OFD-description {
+  opacity: 1;
+  transform: none;
+}
+
+.hover-OFD:hover img {
+  left: 0;
+  filter: brightness(0.30);
+}
+
+/* .hover-OFD:hover .hover-OFD-overlay {
+  opacity: 0;
+} */
+
+
 
 
 /*-----------------------------------Gallery Filter-----------------------------   */
@@ -1189,9 +1286,9 @@ footer{
     width: 100%;
     margin: 0 auto;
 }
-.concern-text{
+/* .concern-text{
   width: 17rem;
-}
+} */
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
