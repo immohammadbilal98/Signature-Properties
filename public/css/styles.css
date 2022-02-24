@@ -13,6 +13,28 @@ body{
   overflow-x: hidden;
 }
 
+/* SCROLLBAR CUSTOM */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(0, 0, 0); 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.377);
+	background-color: rgb(226 184 85);
+}
+/* -------------------- */
+
+
+
 h1,h2,h3,h4,h5,h6{
   font-family: 'Vesper-Libre';
 
@@ -38,8 +60,9 @@ p{
   /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
 }
 
-.full-screen-size {
-  height: 100vh;  
+.full-screen-size-main {
+  height: 86vh;
+  overflow: hidden;
 }
 
 
@@ -52,7 +75,7 @@ img{
   object-fit: cover;
 }
 
-.img-full{
+.img-full-main{
   height: 100%;
   width: 100%;
 }
@@ -82,11 +105,11 @@ line-height:100%;
 letter-spacing:0.5px;
 font-weight:600;
 }
-#myCarousel p{
+/* #myCarousel p{
 font-size:18px;
 margin-bottom:15px;
 color:#d5d5d5;
-}
+} */
 #myCarousel .carousel-item a{background:#6c757dc7; font-size:14px; color:#FFF; padding:13px 32px; display:inline-block; }
 #myCarousel .carousel-item a:hover{background:#3950a2a2; text-decoration:none;  }
 
@@ -907,6 +930,7 @@ header {
   display: flex;
   width: 100%;
   overflow: hidden;
+  justify-content: center;
 }
 .gallery .image-pic img{
   width: 100%;
@@ -1276,6 +1300,21 @@ footer{
   }
   .nav-item{
     margin-right: 0px !important;
+  }
+  .quote-main{
+    display: none;
+  }
+  .img-full-main {
+    height: 70% !important;
+  }
+  .footer-mobile{
+    align-items: center !important;
+  }
+  .footer-about-center{
+    text-align: center;
+  }
+  .footer-contact-padding{
+    padding-top: 1rem;
   }
 }
 
