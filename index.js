@@ -176,32 +176,32 @@ function createFilters() {
 }
 //PATH FILES ==================================================================
 //HOME
-app.get("/",function(req,res){
-    res.render("home",{ msg: false });               
+app.get("/", function (req, res) {
+  res.render("home", { msg: false });
 });
 
-app.get("/about",function(req,res){
-    res.render("about",{ msg: false });               
+app.get("/about", function (req, res) {
+  res.render("about", { msg: false });
 });
 
 
-app.get("/buy",function(req,res){
-    res.render("buy",{ msg: false });               
+app.get("/buy", function (req, res) {
+  res.render("buy", { msg: false });
 });
 
-app.get("/sell",function(req,res){
-    res.render("sell",{ msg: false });               
+app.get("/sell", function (req, res) {
+  res.render("sell", { msg: false });
 });
 
 app.get("/rent", function (req, res) {
-    if (data && data.length) {
-      let reqBody = {};
-      reqBody.properties = data;
-      reqBody.filter = createFilters();
-      res.render("rent", reqBody);
-    } else res.render("rent", { properties: [] });
-  });
-  
+  if (data && data.length) {
+    let reqBody = {};
+    reqBody.properties = data;
+    reqBody.filter = createFilters();
+    res.render("rent", reqBody);
+  } else res.render("rent", { properties: [] });
+});
+
 app.post("/rent", function (req, res) {
   const reqBody = req.body;
   if (reqBody && Object.keys(reqBody).length) {
@@ -212,29 +212,29 @@ app.post("/rent", function (req, res) {
   }
 });
 
-app.get("/off-plan",function(req,res){
-    res.render("off-plan",{ msg: false });               
+app.get("/off-plan", function (req, res) {
+  res.render("off-plan", { msg: false });
 });
 
-app.get("/off-plan/talia",function(req,res){
-  res.render("./ofd/talia",{ msg: false });               
+app.get("/off-plan/talia", function (req, res) {
+  res.render("./ofd/talia", { msg: false });
 });
 
-app.get("/contact",function(req,res){
-    res.render("contact",{ msg: false });               
+app.get("/contact", function (req, res) {
+  res.render("contact", { msg: false });
 });
 
-app.get("/enquiry",function(req,res){
-    res.render("enquiry");               
+app.get("/enquiry", function (req, res) {
+  res.render("enquiry");
 });
 
 //NODMAILER -CONTACT FORM
 
 app.post('/send', (req, res) => {
-    const output = `
+  const output = `
       <p>You have a new contact request</p>
       <h3>Contact Details</h3>
-      <ul>  
+      <ul>
         <li>Name: ${req.body.name}</li>
         <li>Email: ${req.body.email}</li>
         <li>Phone No.: ${req.body.phone}</li>
@@ -242,62 +242,62 @@ app.post('/send', (req, res) => {
       <h3>Message</h3>
       <p>${req.body.message}</p>
     `;
-     /*
-    // create reusable transporter object using the default SMTP transport
-    let transporter = nodemailer.createTransport({
-      host: 'us2.smtp.mailhostbox.com',
-      port: 25,
-      secure: true, // true for 465, false for other ports
-      auth: {
-          user: process.env.USER, // generated ethereal user
-          pass: process.env.PASS  // generated ethereal password
-      },
-      tls:{
-        rejectUnauthorized:false
-      }
-    });
-    */
+  /*
+ // create reusable transporter object using the default SMTP transport
+ let transporter = nodemailer.createTransport({
+   host: 'us2.smtp.mailhostbox.com',
+   port: 25,
+   secure: true, // true for 465, false for other ports
+   auth: {
+       user: process.env.USER, // generated ethereal user
+       pass: process.env.PASS  // generated ethereal password
+   },
+   tls:{
+     rejectUnauthorized:false
+   }
+ });
+ */
 
 
-    let transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        type: 'OAuth2',
-        user: process.env.USER,
-        pass: process.env.PASS,
-        clientId: process.env.CLIENTID,
-        clientSecret: process.env.CLIENTSECRET,
-        refreshToken: process.env.REFRESHTOKEN
-      }
-    });
-
-  
-    // setup email data with unicode symbols
-    let mailOptions = {
-        from: '"Signature Properties Contact" <contactform@signature.property>', // sender address
-        to: 'im.mohammedbilal98@gmail.com', // list of receivers
-        subject: 'Signature Properties Contact Request', // Subject line
-        text: 'Hello world?', // plain text body
-        html: output // html body
-    };
-  
-    // send mail with defined transport object
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            return console.log(error);
-        }
-        console.log('Message sent: %s', info.messageId);   
-        console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-  
-        // res.render("home", { msg: "email has been sent. " });
-        res.render("send");
-    });
-    });
-  
+  let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      type: 'OAuth2',
+      user: process.env.USER,
+      pass: process.env.PASS,
+      clientId: process.env.CLIENTID,
+      clientSecret: process.env.CLIENTSECRET,
+      refreshToken: process.env.REFRESHTOKEN
+    }
+  });
 
 
-//Listen on port 4000     
-app.listen(port, function() {
-    console.log(`Server started on port ${port}`);
-}); 
+  // setup email data with unicode symbols
+  let mailOptions = {
+    from: '"Signature Properties Contact" <contactform@signature.property>', // sender address
+    to: 'im.mohammedbilal98@gmail.com', // list of receivers
+    subject: 'Signature Properties Contact Request', // Subject line
+    text: 'Hello world?', // plain text body
+    html: output // html body
+  };
+
+  // send mail with defined transport object
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return console.log(error);
+    }
+    console.log('Message sent: %s', info.messageId);
+    console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+
+    // res.render("home", { msg: "email has been sent. " });
+    res.render("send");
+  });
+});
+
+
+
+//Listen on port 4000
+app.listen(port, function () {
+  console.log(`Server started on port ${port}`);
+});
 
